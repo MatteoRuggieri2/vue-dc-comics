@@ -58,8 +58,8 @@ export default {
                 text-transform: uppercase;
 
                 &:hover {
-                    color: blue;
-                    border-bottom: 4px solid blue;
+                    color: #0282f9;
+                    border-bottom: 4px solid #0282f9;
                     padding-bottom: 0px;
                 }
                 

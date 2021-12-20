@@ -8,23 +8,23 @@
             </div>
 
             <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="dc merchandise">
-                <span>DIGITAL COMICS</span>
+                <img class="object-img" src="../assets/img/buy-comics-merchandise.png" alt="dc merchandise">
+                <span>DC MERCHANDISE</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="subscription">
-                <span>DIGITAL COMICS</span>
+                <img class="object-img" src="../assets/img/buy-comics-subscriptions.png" alt="subscription">
+                <span>SUBSCRIPTION</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="comic shop locator">
-                <span>DIGITAL COMICS</span>
+                <img class="object-img" src="../assets/img/buy-comics-shop-locator.png" alt="comic shop locator">
+                <span>COMIC SHOP LOCATOR</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="dc power visa">
-                <span>DIGITAL COMICS</span>
+                <img class="object-img" src="../assets/img/buy-dc-power-visa.svg" alt="dc power visa">
+                <span>DC POWER VISA</span>
             </div>
 
         </div>
@@ -55,7 +55,9 @@ export default {
     }
 
     .object-img {
-        width: 50px;
+        height: 50px;
+        max-width: 60px;
+        width: auto;
         margin-right: 10px;
         vertical-align: middle;
     }
