@@ -8,6 +8,10 @@
 
     <PreFooter />
 
+    <footer>
+      <FooterLinkList />
+    </footer>
+
   </div>
 </template>
 
@@ -15,6 +19,7 @@
 import Header from "./components/Header.vue";
 import MainContent from "./components/MainContent.vue";
 import PreFooter from "./components/PreFooter.vue";
+import FooterLinkList from "./components/FooterLinkList.vue";
 
 
 export default {
@@ -22,7 +27,8 @@ export default {
   components: {
     Header,
     MainContent,
-    PreFooter
+    PreFooter,
+    FooterLinkList
   },
 };
 </script>

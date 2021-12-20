@@ -3,27 +3,27 @@
         <div class="container">
             
             <div class="pre-footer-object">
-                <img class="img23" src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="digital comics">
                 <span>DIGITAL COMICS</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="img23" src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="dc merchandise">
                 <span>DIGITAL COMICS</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="img23" src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="subscription">
                 <span>DIGITAL COMICS</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="img23" src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="comic shop locator">
                 <span>DIGITAL COMICS</span>
             </div>
 
             <div class="pre-footer-object">
-                <img class="img23" src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="dc power visa">
                 <span>DIGITAL COMICS</span>
             </div>
 
@@ -51,11 +51,10 @@ export default {
     }
 
     .pre-footer-object {
-        background-color: violet;
         vertical-align: middle;
     }
 
-    .img23 {
+    .object-img {
         width: 50px;
         margin-right: 10px;
         vertical-align: middle;
