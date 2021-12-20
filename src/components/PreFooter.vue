@@ -49,11 +49,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
+
     .pre-footer {
         width: 100%;
         padding: 50px 0;
-        background-color: #0282f9;
-        color: white;
+        background-color: $primary_color;
+        color: $secondary_color;
 
         .container {
             display: flex;

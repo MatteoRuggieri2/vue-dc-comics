@@ -31,23 +31,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../style/variables.scss';
+
     header{
         width: 100%;
         height: 120px;
-        /* padding: 20px; */
     
-
-        /* test */
-        // background-color: darkcyan;
-
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
 
-            // test
-            // background-color: darkgoldenrod;
         }
 
         ul {
@@ -58,8 +53,8 @@ export default {
                 text-transform: uppercase;
 
                 &:hover {
-                    color: #0282f9;
-                    border-bottom: 4px solid #0282f9;
+                    color: $primary_color;
+                    border-bottom: 4px solid $primary_color;
                     padding-bottom: 0px;
                 }
                 
@@ -72,8 +67,5 @@ export default {
 
     .logo-container {
         width: 80px;
-
-        // test
-        // background-color: darkred;
     }
 </style>

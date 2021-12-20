@@ -98,10 +98,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
 
     section {
         padding: 50px 0;
-        color: white;
+        color: $secondary_color;
         background-image: url(../assets/img/footer-bg.jpg);
         overflow: hidden;
 
@@ -112,14 +113,15 @@ export default {
             .link-list{
                 display: flex;
 
-                // test
-                background-color: yellowgreen;
-
                 .list-container {
                     margin: 0 20px;
 
                     ul {
                         margin-bottom: 20px;
+
+                        li {
+                            color: grey;
+                        }
                     }
                 }
             }

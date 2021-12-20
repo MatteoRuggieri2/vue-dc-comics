@@ -1,9 +1,9 @@
 <template>
     <section>
         <div class="container">
-            <a href="#">SIGN-UP NOW!</a>
+            <a class="btn-blue-border" href="#">SIGN-UP NOW!</a>
             <div class="socials-container">
-                <span>FOLLOW US</span>
+                <span class="follow-us">FOLLOW US</span>
 
                 <ul>
                     <li>
@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
+@import '../style/general.scss';
+
     section {
         padding: 40px 0;
         background-color: #303030;
@@ -52,6 +55,10 @@ export default {
             .socials-container {
                 display: flex;
                 align-items: center;
+
+                .follow-us {
+                    color: $primary_color;
+                }
 
                 ul {
                     margin-left: 20px;

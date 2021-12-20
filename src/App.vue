@@ -38,36 +38,14 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-
-// RESET
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import './style/general.scss';
 
 // COMMON
 #app {
   font-family: 'Oswald', sans-serif;
 }
 
-.container {
-  width: 70%;
-  margin: auto;
-}
 
-img {
-  width: 100%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 // MAIN
 main {

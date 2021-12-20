@@ -11,7 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
+
     .main-title {
         font-size: 30px;
+        color: $secondary_color;
     }
 </style>
