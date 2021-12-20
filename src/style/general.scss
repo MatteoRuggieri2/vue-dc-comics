@@ -26,7 +26,13 @@ a {
 }
 
 .btn-blue-border {
+    display: inline-block;
     padding: 7px 14px;
     color: $secondary_color;
     border: 2px solid $primary_color;
+    font-family: 'Segoe UI', sans-serif;
+
+    &:hover {
+        background-color: $primary_color;
+    }
 }

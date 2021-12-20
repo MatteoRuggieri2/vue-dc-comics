@@ -3,7 +3,7 @@
         <div class="container">
             
             <div v-for="(element, index) in preFooterObject" class="pre-footer-object" :key="index">
-                <img class="object-img" :src="require('../assets/img/' + element.img)" alt="">
+                <img class="object-img" :src="require('../assets/img/' + element.img)" alt="element.name">
                 <span>{{ element.name }}</span>
             </div>
 
@@ -56,6 +56,7 @@ export default {
         padding: 50px 0;
         background-color: $primary_color;
         color: $secondary_color;
+        font-family: 'Segoe UI', sans-serif;
 
         .container {
             display: flex;

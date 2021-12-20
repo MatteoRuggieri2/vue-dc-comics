@@ -121,6 +121,8 @@ export default {
 
                         li {
                             color: grey;
+                            font-size: 12px;
+                            font-family: 'Segoe UI', sans-serif;
                         }
                     }
                 }

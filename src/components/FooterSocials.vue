@@ -6,24 +6,8 @@
                 <span class="follow-us">FOLLOW US</span>
 
                 <ul>
-                    <li>
-                        <a href="#"><img class="social-icon" src="../assets/img/footer-facebook.png" alt="facebook icon"></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><img class="social-icon" src="../assets/img/footer-twitter.png" alt="twitter icon"></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><img class="social-icon" src="../assets/img/footer-youtube.png" alt="youtube icon"></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><img class="social-icon" src="../assets/img/footer-pinterest.png" alt="pinterest icon"></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><img class="social-icon" src="../assets/img/footer-periscope.png" alt="periscope icon"></a>
+                    <li v-for="(element, index) in socials" :key="index">
+                        <a href="#"><img class="social-icon" :src="require('../assets/img/' + element.img)" :alt="element.name"></a>
                     </li>
                 </ul>
                 
@@ -34,7 +18,38 @@
 
 <script>
 export default {
-    name: "FooterSocials"
+    name: "FooterSocials",
+    data: function() {
+        return {
+            socials: {
+
+                digitalComics: {
+                    name: 'facebook',
+                    img: 'footer-facebook.png'
+                },
+
+                dcMerchandise: {
+                    name: 'twitter',
+                    img: 'footer-twitter.png'
+                },
+
+                subscription: {
+                    name: 'youtube',
+                    img: 'footer-youtube.png'
+                },
+
+                ComicShop: {
+                    name: 'pinterest',
+                    img: 'footer-pinterest.png'
+                },
+
+                dcPowerVisa: {
+                    name: 'periscope',
+                    img: 'footer-periscope.png'
+                }
+            }
+        }
+    }
 }
 </script>
 
@@ -45,7 +60,7 @@ export default {
     section {
         padding: 40px 0;
         background-color: #303030;
-        color: white;
+        color: $secondary_color;
         
         .container {
             display: flex;
