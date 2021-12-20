@@ -4,51 +4,49 @@
 
             <!-- Link list -->
             <div class="link-list">
-                <div class="list-container">
-                    <h3>title list</h3>
-                    <ul>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                    </ul>
 
-                    <h3>title list</h3>
-                    <ul>
-                        <li>test</li>
-                        <li>test</li>
-                    </ul>
+                <!-- List -->
+                <div class="list-container">
+                    <div v-for="(element, index) in linkList.comics"  :key="index">
+
+                        <!-- Title List -->
+                        <h3>{{ element.title }}</h3>
+                        <ul>
+                            <li v-for="(element, index) in linkList.comics[index].link"  :key="index">
+                                <a href="#">{{ element }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                
                 </div>
 
+                <!-- List -->
                 <div class="list-container">
-                    <h3>title list</h3>
-                    <ul>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                    </ul>
+                    <div v-for="(element, index) in linkList.dc"  :key="index">
+
+                        <!-- Title List -->
+                        <h3>{{ element.title }}</h3>
+                        <ul>
+                            <li v-for="(element, index) in linkList.dc[index].link"  :key="index">
+                                <a href="#">{{ element }}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
+                <!-- List -->
                 <div class="list-container">
-                    <h3>title list</h3>
-                    <ul>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                    </ul>
+                    <div v-for="(element, index) in linkList.sites"  :key="index">
+
+                        <!-- Title List -->
+                        <h3>{{ element.title }}</h3>
+                        <ul>
+                            <li v-for="(element, index) in linkList.sites[index].link"  :key="index">
+                                <a href="#">{{ element }}</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
@@ -62,7 +60,40 @@
 
 <script>
 export default {
-    name: "FooterLinkList"
+    name: "FooterLinkList",
+    data: function() {
+        return {
+            linkList: {
+
+                comics: {
+                    dcComics: {
+                        title: 'DC COMICS',
+                        link: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                    },
+
+                    shop: {
+                        title: 'SHOP',
+                        link: ['Shop DC', 'Shop DC Collectibles']
+                    }
+                },
+
+                dc: {
+                    dcList: {
+                        title: 'DC',
+                        link: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subsciptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                    }
+                },
+
+                sites: {
+                    sitesList: {
+                        title: 'SITES',
+                    link: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                    }
+                }
+
+            }
+        };
+    }
 }
 </script>
 
