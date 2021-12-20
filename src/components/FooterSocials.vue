@@ -73,6 +73,7 @@ export default {
 
                 .follow-us {
                     color: $primary_color;
+                    font-size: 20px;
                 }
 
                 ul {

@@ -116,10 +116,16 @@ export default {
                 .list-container {
                     margin: 0 20px;
 
+                    h3 {
+                        margin-bottom: 15px;
+                        font-size: 20px;
+                    }
+
                     ul {
                         margin-bottom: 20px;
 
                         li {
+                            margin: 5px 0;
                             color: grey;
                             font-size: 12px;
                             font-family: 'Segoe UI', sans-serif;
