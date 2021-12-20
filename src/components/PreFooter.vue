@@ -2,29 +2,9 @@
     <section class="pre-footer">
         <div class="container">
             
-            <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-digital-comics.png" alt="digital comics">
-                <span>DIGITAL COMICS</span>
-            </div>
-
-            <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-merchandise.png" alt="dc merchandise">
-                <span>DC MERCHANDISE</span>
-            </div>
-
-            <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-subscriptions.png" alt="subscription">
-                <span>SUBSCRIPTION</span>
-            </div>
-
-            <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-comics-shop-locator.png" alt="comic shop locator">
-                <span>COMIC SHOP LOCATOR</span>
-            </div>
-
-            <div class="pre-footer-object">
-                <img class="object-img" src="../assets/img/buy-dc-power-visa.svg" alt="dc power visa">
-                <span>DC POWER VISA</span>
+            <div v-for="(element, index) in preFooterObject" class="pre-footer-object" :key="index">
+                <img class="object-img" :src="require('../assets/img/' + element.img)" alt="">
+                <span>{{ element.name }}</span>
             </div>
 
         </div>
@@ -33,7 +13,38 @@
 
 <script>
 export default {
-    name: "PreFooter"
+    name: "PreFooter",
+    data: function() {
+        return {
+            preFooterObject: {
+
+                digitalComics: {
+                    name: 'DIGITAL COMICS',
+                    img: 'buy-comics-digital-comics.png'
+                },
+
+                dcMerchandise: {
+                    name: 'DC MERCHANDISE',
+                    img: 'buy-comics-merchandise.png'
+                },
+
+                subscription: {
+                    name: 'SUBSCRIPTION',
+                    img: 'buy-comics-subscriptions.png'
+                },
+
+                ComicShop: {
+                    name: 'COMIC SHOP LOCATOR',
+                    img: 'buy-comics-shop-locator.png'
+                },
+
+                dcPowerVisa: {
+                    name: 'DC POWER VISA',
+                    img: 'buy-dc-power-visa.svg'
+                }
+            }
+        }
+    }
 }
 </script>
 
