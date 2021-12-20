@@ -55,6 +55,7 @@ export default {
                 display: inline-block;
                 line-height: 116px;
                 padding-bottom: 4px;
+                text-transform: uppercase;
 
                 &:hover {
                     color: blue;

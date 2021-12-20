@@ -2,28 +2,41 @@
   <div id="app">
     <Header />
 
+    <main>
+      <MainContent />
+    </main>
+
+    <PreFooter />
+
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import MainContent from "./components/MainContent.vue";
+import PreFooter from "./components/PreFooter.vue";
 
 
 export default {
   name: "App",
   components: {
-    Header
+    Header,
+    MainContent,
+    PreFooter
   },
 };
 </script>
 
 <style lang="scss">
+
+// RESET
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
+// COMMON
 .container {
   width: 70%;
   margin: auto;
@@ -40,5 +53,12 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+// MAIN
+main {
+  background-color: black;
+  color: white;
+  padding: 50px 0;
 }
 </style>
