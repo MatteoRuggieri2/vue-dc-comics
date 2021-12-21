@@ -1,7 +1,9 @@
 <template>
     <div class="container">
-        <span class="main-title">CURRENT SERIES</span>
-        <SingleSeries SeriesTitle="ciao" />
+        <div class="wrapper">
+            <span class="main-title">CURRENT SERIES</span>
+            <SingleSeries v-for="(series, index) in card" :key="index" :SeriesObject="series" />
+        </div>
     </div>
 </template>
 
@@ -97,18 +99,26 @@ export default {
 @import '../style/variables.scss';
 
     .container {
-        padding: 50px 0;
-        position: relative;
+        .wrapper {
+            width: 100%;
+            padding: 50px 0;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
 
-        .main-title {
-            padding: 8px 30px;
-            font-size: 30px;
-            color: $secondary_color;
-            background-color: $primary_color;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateY(-50%);
+            // test
+            background-color: pink;
+
+            .main-title {
+                padding: 8px 30px;
+                font-size: 30px;
+                color: $secondary_color;
+                background-color: $primary_color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-50%);
+            }
         }
     }
 
