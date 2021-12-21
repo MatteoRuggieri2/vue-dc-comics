@@ -1,9 +1,11 @@
 <template>
     <div class="single-series-container">
-        <div class="series-img-container">
-            <img :src="SeriesObject.thumb" :alt="SeriesObject.series">
-        </div>
-        <h2>{{ SeriesObject.series.toUpperCase() }}</h2>
+        <a href="#">
+            <div class="series-img-container">
+                <img :src="SeriesObject.thumb" :alt="SeriesObject.series">
+            </div>
+            <h2>{{ SeriesObject.series.toUpperCase() }}</h2>
+        </a>
     </div>
 </template>
 
@@ -16,14 +18,9 @@ export default {
 
 <style lang="scss" scoped>
     .single-series-container {
-        width: calc( (100% / 6) - 20px );
-        margin: 0 10px 20px;
-        font-family: "Segoe UI", sans-serif;
+        width: calc( (100% / 6) - 30px );
+        margin: 10px 15px;
         overflow: hidden;
-
-        // test
-        background-color: darkcyan;
-        border: 1px solid red;
 
         .series-img-container {
             width: 100%;
@@ -32,7 +29,10 @@ export default {
         }
 
         h2 {
+            padding: 20px 0;
+            font-family: "Segoe UI", sans-serif;
             font-weight: lighter;
+            font-size: 16px;
         }
     }
 </style>

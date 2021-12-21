@@ -106,9 +106,6 @@ export default {
             display: flex;
             flex-wrap: wrap;
 
-            // test
-            background-color: pink;
-
             .main-title {
                 padding: 8px 30px;
                 font-size: 30px;
