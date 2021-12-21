@@ -9,8 +9,8 @@
             
             <!-- Link list -->
             <ul>
-                <li v-for="(element, index) in headerLink" :key="index">
-                    <a href="#">{{ element }}</a>
+                <li v-for="(element, index) in headerLink" :key="index" :class="{ selected: element.selectedPage }">
+                    <a href="element.url">{{ element.text }}</a>
                 </li>
             </ul>
         </div>
@@ -22,7 +22,69 @@ export default {
     name: "Header",
     data: function() {
         return{
-            headerLink: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop']
+            headerLink: [
+                
+                {
+                    text: 'characters',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'comics',
+                    url: '#',
+                    selectedPage: true
+                },
+
+                {
+                    text: 'movies',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'tv',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'games',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'collectibles',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'videos',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'fans',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'news',
+                    url: '#',
+                    selectedPage: false
+                },
+
+                {
+                    text: 'shop',
+                    url: '#',
+                    selectedPage: false
+                }
+                
+            ]
         }
     }
 }
@@ -50,7 +112,7 @@ export default {
                 padding-bottom: 4px;
                 text-transform: uppercase;
 
-                &:hover {
+                &.selected {
                     color: $primary_color;
                     border-bottom: 4px solid $primary_color;
                     padding-bottom: 0px;
