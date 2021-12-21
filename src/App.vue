@@ -3,6 +3,7 @@
     <Header />
 
     <main>
+      <Jumbotron />
       <MainContent />
     </main>
 
@@ -18,6 +19,7 @@
 
 <script>
 import Header from "./components/Header.vue";
+import Jumbotron from "./components/Jumbotron.vue";
 import MainContent from "./components/MainContent.vue";
 import PreFooter from "./components/PreFooter.vue";
 import FooterLinkList from "./components/FooterLinkList.vue";
@@ -28,6 +30,7 @@ export default {
   name: "App",
   components: {
     Header,
+    Jumbotron,
     MainContent,
     PreFooter,
     FooterLinkList,
@@ -35,7 +38,7 @@ export default {
   },
   data: function() {
     return {
-      cards: [
+      card: [
         {
           "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
           "price": "$19.99",
@@ -129,6 +132,5 @@ export default {
 main {
   background-color: #1c1c1c;
   color: white;
-  padding: 50px 0;
 }
 </style>
