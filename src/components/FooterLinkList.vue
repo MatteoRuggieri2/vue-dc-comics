@@ -2,58 +2,61 @@
     <section>
         <div class="container">
 
-            <!-- Link list -->
-            <div class="link-list">
+            <div class="wrapper">
+                <!-- Link list -->
+                <div class="link-list">
 
-                <!-- List -->
-                <div class="list-container">
-                    <div v-for="(element, index) in linkList.comics"  :key="index">
+                    <!-- List -->
+                    <div class="list-container">
+                        <div v-for="(element, index) in linkList.comics"  :key="index">
 
-                        <!-- Title List -->
-                        <h3>{{ element.title }}</h3>
-                        <ul>
-                            <li v-for="(element, index) in linkList.comics[index].link"  :key="index">
-                                <a href="#">{{ element }}</a>
-                            </li>
-                        </ul>
+                            <!-- Title List -->
+                            <h3>{{ element.title }}</h3>
+                            <ul>
+                                <li v-for="(element, index) in linkList.comics[index].link"  :key="index">
+                                    <a href="#">{{ element }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    
                     </div>
-                
+
+                    <!-- List -->
+                    <div class="list-container">
+                        <div v-for="(element, index) in linkList.dc"  :key="index">
+
+                            <!-- Title List -->
+                            <h3>{{ element.title }}</h3>
+                            <ul>
+                                <li v-for="(element, index) in linkList.dc[index].link"  :key="index">
+                                    <a href="#">{{ element }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- List -->
+                    <div class="list-container">
+                        <div v-for="(element, index) in linkList.sites"  :key="index">
+
+                            <!-- Title List -->
+                            <h3>{{ element.title }}</h3>
+                            <ul>
+                                <li v-for="(element, index) in linkList.sites[index].link"  :key="index">
+                                    <a href="#">{{ element }}</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- List -->
-                <div class="list-container">
-                    <div v-for="(element, index) in linkList.dc"  :key="index">
-
-                        <!-- Title List -->
-                        <h3>{{ element.title }}</h3>
-                        <ul>
-                            <li v-for="(element, index) in linkList.dc[index].link"  :key="index">
-                                <a href="#">{{ element }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- List -->
-                <div class="list-container">
-                    <div v-for="(element, index) in linkList.sites"  :key="index">
-
-                        <!-- Title List -->
-                        <h3>{{ element.title }}</h3>
-                        <ul>
-                            <li v-for="(element, index) in linkList.sites[index].link"  :key="index">
-                                <a href="#">{{ element }}</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                <!-- DC big logo -->
+                <div class="big-logo">
+                    <img src="../assets/img/dc-logo-bg.png" alt="Big DC Logo">
                 </div>
             </div>
 
-            <!-- DC big logo -->
-            <div class="big-logo">
-                <img src="../assets/img/dc-logo-bg.png" alt="Big DC Logo">
-            </div>
         </div>
     </section>
 </template>
@@ -108,37 +111,39 @@ export default {
 
         .container {
             
-            position: relative;
+            .wrapper {
+                position: relative;
 
-            .link-list{
-                display: flex;
+                .link-list{
+                    display: flex;
 
-                .list-container {
-                    margin: 0 20px;
+                    .list-container {
+                        margin: 0 20px;
 
-                    h3 {
-                        margin-bottom: 15px;
-                        font-size: 20px;
-                    }
+                        h3 {
+                            margin-bottom: 15px;
+                            font-size: 20px;
+                        }
 
-                    ul {
-                        margin-bottom: 20px;
+                        ul {
+                            margin-bottom: 20px;
 
-                        li {
-                            margin: 5px 0;
-                            color: grey;
-                            font-size: 12px;
-                            font-family: 'Segoe UI', sans-serif;
+                            li {
+                                margin: 5px 0;
+                                color: grey;
+                                font-size: 12px;
+                                font-family: 'Segoe UI', sans-serif;
+                            }
                         }
                     }
                 }
-            }
 
-            .big-logo {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
+                .big-logo {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
             }
         }
     }

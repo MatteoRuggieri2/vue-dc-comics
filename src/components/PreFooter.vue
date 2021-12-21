@@ -2,9 +2,11 @@
     <section class="pre-footer">
         <div class="container">
             
-            <div v-for="(element, index) in preFooterObject" class="pre-footer-object" :key="index">
-                <img class="object-img" :src="require('../assets/img/' + element.img)" alt="element.name">
-                <span>{{ element.name }}</span>
+            <div class="wrapper">
+                <div v-for="(element, index) in preFooterObject" class="pre-footer-object" :key="index">
+                    <img class="object-img" :src="require('../assets/img/' + element.img)" alt="element.name">
+                    <span>{{ element.name }}</span>
+                </div>
             </div>
 
         </div>
@@ -59,8 +61,10 @@ export default {
         font-family: 'Segoe UI', sans-serif;
 
         .container {
-            display: flex;
-            justify-content: space-around;
+            .wrapper {
+                display: flex;
+                justify-content: space-around;
+            }
         }
     }
 

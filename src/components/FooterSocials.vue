@@ -1,17 +1,21 @@
 <template>
     <section>
         <div class="container">
-            <a class="btn-blue-border" href="#">SIGN-UP NOW!</a>
-            <div class="socials-container">
-                <span class="follow-us">FOLLOW US</span>
+            
+            <div class="wrapper">
+                <a class="btn-blue-border" href="#">SIGN-UP NOW!</a>
+                <div class="socials-container">
+                    <span class="follow-us">FOLLOW US</span>
 
-                <ul>
-                    <li v-for="(element, index) in socials" :key="index">
-                        <a href="#"><img class="social-icon" :src="require('../assets/img/' + element.img)" :alt="element.name"></a>
-                    </li>
-                </ul>
-                
+                    <ul>
+                        <li v-for="(element, index) in socials" :key="index">
+                            <a href="#"><img class="social-icon" :src="require('../assets/img/' + element.img)" :alt="element.name"></a>
+                        </li>
+                    </ul>
+                    
+                </div>
             </div>
+
         </div>
     </section>
 </template>
@@ -63,28 +67,30 @@ export default {
         color: $secondary_color;
         
         .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .socials-container {
+            .wrapper {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
 
-                .follow-us {
-                    color: $primary_color;
-                    font-size: 20px;
-                }
-
-                ul {
-                    margin-left: 20px;
+                .socials-container {
                     display: flex;
-                }
-            }
+                    align-items: center;
 
-            .social-icon {
-                width: 40px;
-                margin: 0 10px;
+                    .follow-us {
+                        color: $primary_color;
+                        font-size: 20px;
+                    }
+
+                    ul {
+                        margin-left: 20px;
+                        display: flex;
+                    }
+                }
+
+                .social-icon {
+                    width: 40px;
+                    margin: 0 10px;
+                }
             }
         }
 
