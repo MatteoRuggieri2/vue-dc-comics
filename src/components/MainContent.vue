@@ -4,6 +4,7 @@
             <span class="main-title">CURRENT SERIES</span>
             <SingleSeries v-for="(series, index) in card" :key="index" :SeriesObject="series" />
         </div>
+        <a class="btn-lg-blue-bckg" href="#">LOAD MORE</a>
     </div>
 </template>
 
@@ -99,9 +100,12 @@ export default {
 @import '../style/variables.scss';
 
     .container {
+        text-align: center;
+        padding-bottom: 20px;
+
         .wrapper {
             width: 100%;
-            padding: 50px 0;
+            padding: 50px 0 10px;
             position: relative;
             display: flex;
             flex-wrap: wrap;
